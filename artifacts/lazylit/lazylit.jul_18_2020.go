@@ -516,6 +516,7 @@ func main() {
 
 	ensureDirectory("docs")
 	// A `.nojekyll` file ensures GitHub Pages won't run anything through Jekyll.
+    // See https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/.
 	f, err := os.Create("docs/.nojekyll")
 	f.Close()
 	if err != nil && os.IsNotExist(err) {
